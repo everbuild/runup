@@ -1,0 +1,16 @@
+
+Usage: runup [--model=paths] [build]
+
+If "build" is specified, a release build will be made, otherwise, Runup starts in development mode.
+
+Options:
+
+--model, -m:        Comma (",") separated list of paths to model files (default: "?./project").
+                    If a path starts with "." or "..", it's resolved relative to CWD.
+                    Otherwise it's resolved using the Node require mechanism
+                    (meaning it could point to any node module).
+                    If a path starts with "?" it's considered optional and the process won't fail if it doesn't exist.
+
+--help, -h:         You're reading it.
+
+More info: https://github.com/everbuild/runup
