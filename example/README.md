@@ -1,4 +1,4 @@
-> A very basic example of a project using runup.
+> A very basic example of a project using Runup.
 
 It only uses default flows, meaning no special processing is done for any assets.
 A more real-world example is coming soon (TODO).
