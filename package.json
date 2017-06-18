@@ -4,8 +4,9 @@
   "main": "./lib/index.js",
   "bin": "./cli.js",
   "scripts": {
+    "lint": "eslint --ignore-path .gitignore **/*.js",
     "test": "thintest",
-    "preversion": "npm test",
+    "preversion": "npm run lint && npm test",
     "postversion": "git push && git push --tags"
   },
   "keywords": [
@@ -44,7 +45,10 @@
     "rollup-plugin-hypothetical": "^1.2.1",
     "rollup-plugin-node-resolve": "^3.0.0",
     "sockjs": "^0.3.18",
-    "sockjs-client": "^1.1.4",
+    "sockjs-client": "^1.1.4"
+  },
+  "devDependencies": {
+    "eslint": "^4.0.0",
     "thintest": "^0.3.0"
   }
 }
