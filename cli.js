@@ -3,8 +3,7 @@ const minimist = require('minimist')
 
 const argv = minimist(process.argv.slice(2), {
     default: {
-        model: '?./project',
-        verbose: false
+        model: '?./project'
     },
     alias: {
         model: 'm',
@@ -19,7 +18,7 @@ if(argv.help) {
     const runup = require('./lib/index')
 
     const model = {
-        mode: argv._[0] || 'dev',
+        mode: argv._[0],
         extend: argv.model.split(',').map(f => f.trim()),
         verbose: argv.verbose
     }
