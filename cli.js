@@ -24,7 +24,7 @@ if(argv.help) {
     }
 
     runup(model).catch(error => {
-        console.error(error)
+        if(model.verbose) console.error(error)
         process.exit(1)
     })
 }
